@@ -11,7 +11,8 @@ ps<-function(formula = formula(data),
              verbose=TRUE,
              estimand="ATE", 
              stop.method = c("ks.mean", "es.mean"), 
-             sampw = NULL, multinom = FALSE, 
+             sampw = NULL, multinom = FALSE,
+             n.cores=NULL,
              ...){
              	
 	
@@ -124,7 +125,8 @@ stop.method <- methodList
               bag.fraction = bag.fraction,
               train.fraction = 1,
               verbose = verbose,
-              keep.data = FALSE)
+              keep.data = FALSE,
+              n.cores=n.cores)
 
    if(verbose) cat("Diagnosis of unweighted analysis\n")
    
